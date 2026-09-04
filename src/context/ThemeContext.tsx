@@ -2,35 +2,65 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 
-type ThemeCtx = { dark: boolean; toggle: () => void };
+export type ThemeMode = "light" | "dark" | "pink";
 
-const Ctx = createContext<ThemeCtx>({ dark: false, toggle: () => {} });
+type ThemeCtx = { theme: ThemeMode; cycle: () => void; dark: boolean };
+
+const Ctx = createContext<ThemeCtx>({
+  theme: "light",
+  cycle: () => {},
+  dark: false,
+});
+
+const ORDER: ThemeMode[] = ["light", "dark", "pink"];
+
+function applyTheme(mode: ThemeMode) {
+  const root = document.documentElement;
+  root.classList.remove("dark", "theme-pink");
+  if (mode === "dark") root.classList.add("dark");
+  if (mode === "pink") root.classList.add("theme-pink");
+}
+
+function parseSaved(raw: string | null, prefersDark: boolean): ThemeMode {
+  if (raw === "light" || raw === "dark" || raw === "pink") return raw;
+  // Migrate old boolean-style values if any
+  if (raw === "true" || raw === "1") return "dark";
+  if (raw === "false" || raw === "0") return "light";
+  return prefersDark ? "dark" : "light";
+}
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [dark, setDark] = useState(false);
+  const [theme, setTheme] = useState<ThemeMode>("light");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("fbc-theme");
     const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = saved ? saved === "dark" : prefers;
-    setDark(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
+    const mode = parseSaved(saved, prefers);
+    setTheme(mode);
+    applyTheme(mode);
+    // Normalize storage to the new string form
+    localStorage.setItem("fbc-theme", mode);
     setReady(true);
   }, []);
 
-  const toggle = () => {
-    setDark((d) => {
-      const next = !d;
-      document.documentElement.classList.toggle("dark", next);
-      localStorage.setItem("fbc-theme", next ? "dark" : "light");
+  const cycle = () => {
+    setTheme((current) => {
+      const idx = ORDER.indexOf(current);
+      const next = ORDER[(idx + 1) % ORDER.length];
+      applyTheme(next);
+      localStorage.setItem("fbc-theme", next);
       return next;
     });
   };
 
   if (!ready) return <div className="min-h-screen bg-bloom-cream" />;
 
-  return <Ctx.Provider value={{ dark, toggle }}>{children}</Ctx.Provider>;
+  return (
+    <Ctx.Provider value={{ theme, cycle, dark: theme === "dark" }}>
+      {children}
+    </Ctx.Provider>
+  );
 }
 
 export const useTheme = () => useContext(Ctx);

@@ -15,7 +15,7 @@ import { formatPrice } from "@/lib/utils";
 export function Header() {
   const { count, setOpen } = useCart();
   const { ids } = useWishlist();
-  const { dark, toggle } = useTheme();
+  const { theme, cycle } = useTheme();
   const { lang, setLang, currency, setCurrency, t } = useLocale();
   const { user } = useAuth();
   const [mobile, setMobile] = useState(false);
@@ -124,8 +124,15 @@ export function Header() {
           <button onClick={() => setCurrency(currency === "INR" ? "USD" : "INR")} className="rounded-full border border-bloom-lilac/40 px-2 py-1 text-xs font-medium text-bloom-purple dark:text-bloom-lilac">
             {currency}
           </button>
-          <button onClick={toggle} aria-label="Toggle dark mode" className="rounded-full p-2 hover:bg-bloom-lilac/20">
-            {dark ? <Sun className="h-5 w-5 text-bloom-gold" /> : <Moon className="h-5 w-5 text-bloom-purple" />}
+          <button
+            onClick={cycle}
+            aria-label="Cycle theme: light, dark, pink"
+            title={`Theme: ${theme}`}
+            className="rounded-full p-2 hover:bg-bloom-lilac/20"
+          >
+            {theme === "light" && <Moon className="h-5 w-5 text-bloom-purple" />}
+            {theme === "dark" && <Sun className="h-5 w-5 text-bloom-gold" />}
+            {theme === "pink" && <Heart className="h-5 w-5 text-rose-500" />}
           </button>
           <Link href="/login" className="rounded-full p-2 hover:bg-bloom-lilac/20" aria-label="Account">
             <User className="h-5 w-5 text-bloom-purple dark:text-bloom-lilac" />

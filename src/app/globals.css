@@ -58,3 +58,30 @@ html.dark body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Pink site theme (blush brand look) */
+html.theme-pink body { background-color: #FFF5F8; color: #4A2030; }
+html.theme-pink header { border-color: rgba(233, 30, 99, 0.25); background-color: rgba(255, 245, 248, 0.92); }
+
+html.theme-pink .btn-primary { background-color: #C2185B; color: #fff; }
+html.theme-pink .btn-primary:hover { background-color: #E91E63; }
+
+html.theme-pink .btn-outline { border-color: #C2185B; color: #C2185B; }
+html.theme-pink .btn-outline:hover { background-color: #C2185B; color: #fff; }
+
+html.theme-pink .section-title { color: #880E4F; }
+
+html.theme-pink .card-surface { background-color: rgba(255, 255, 255, 0.92); box-shadow: 0 10px 30px rgba(194, 24, 91, 0.08); }
+
+html.theme-pink .bg-bloom-purple { background-color: #C2185B !important; }
+html.theme-pink .bg-bloom-purple-deep { background-color: #880E4F !important; }
+html.theme-pink .bg-bloom-purple-soft { background-color: #E91E63 !important; }
+html.theme-pink .text-bloom-purple { color: #C2185B !important; }
+html.theme-pink .text-bloom-purple-deep { color: #880E4F !important; }
+html.theme-pink .border-bloom-purple { border-color: #C2185B !important; }
+html.theme-pink .border-bloom-lilac { border-color: #F48FB1 !important; }
+html.theme-pink .bg-bloom-cream { background-color: #FFF5F8 !important; }
+html.theme-pink .bg-bloom-lilac { background-color: #FCE4EC !important; }
+html.theme-pink .bg-bloom-lilac-soft { background-color: #FFF0F5 !important; }
+
+html.theme-pink .petal { background: radial-gradient(circle at 30% 30%, #F8BBD0, #C2185B); }
