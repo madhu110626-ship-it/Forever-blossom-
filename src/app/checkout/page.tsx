@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { useLocale } from "@/context/LocaleContext";
 import { formatPrice } from "@/lib/utils";
@@ -95,6 +96,13 @@ export default function CheckoutPage() {
         <h1 className="section-title mb-4">Checkout</h1>
         <p className="rounded-2xl bg-bloom-lilac/20 px-4 py-3 text-sm text-bloom-purple dark:text-bloom-lilac">
           After you place an order, WhatsApp opens so we get your order instantly on 77980 54491.
+        </p>
+        <p className="text-xs opacity-70">
+          Handmade lead times & delivery: see{" "}
+          <Link href="/shipping" className="underline underline-offset-2 hover:text-bloom-gold">
+            Shipping &amp; Returns
+          </Link>
+          .
         </p>
         {(["name", "phone", "email", "address", "city", "pin"] as const).map((k) => (
           <input
