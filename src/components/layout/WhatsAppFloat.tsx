@@ -1,11 +1,12 @@
 "use client";
-
-const WA = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
+import { waLink } from "@/lib/whatsapp";
 
 export function WhatsAppFloat() {
   return (
     <a
-      href={`https://wa.me/${WA}?text=${encodeURIComponent("Hi Forever Bloom Crochet! I would like to know more about your handmade flowers.")}`}
+      href={waLink(
+        "Hi Forever Bloom Crochet! I would like to know more about your handmade flowers."
+      )}
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105"

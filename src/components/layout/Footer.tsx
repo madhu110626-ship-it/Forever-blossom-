@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { waLink } from "@/lib/whatsapp";
 
 const IG = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/foreverbloomcrochet";
 const FB = process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://facebook.com/foreverbloomcrochet";
-const WA = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
 
 export function Footer() {
   return (
@@ -51,7 +51,7 @@ export function Footer() {
           <div className="mb-4 flex gap-3 text-sm">
             <a href={IG} target="_blank" rel="noreferrer" className="rounded-full border border-bloom-gold/50 px-3 py-1 hover:bg-bloom-gold hover:text-bloom-purple-deep">Instagram</a>
             <a href={FB} target="_blank" rel="noreferrer" className="rounded-full border border-bloom-gold/50 px-3 py-1 hover:bg-bloom-gold hover:text-bloom-purple-deep">Facebook</a>
-            <a href={`https://wa.me/${WA}`} target="_blank" rel="noreferrer" className="rounded-full border border-bloom-gold/50 px-3 py-1 hover:bg-bloom-gold hover:text-bloom-purple-deep">WhatsApp</a>
+            <a href={waLink("Hi Forever Bloom Crochet!")} target="_blank" rel="noreferrer" className="rounded-full border border-bloom-gold/50 px-3 py-1 hover:bg-bloom-gold hover:text-bloom-purple-deep">WhatsApp</a>
           </div>
           <p className="text-sm text-bloom-ivory/80">
             Ambarnath, Thane,<br />Maharashtra, India
