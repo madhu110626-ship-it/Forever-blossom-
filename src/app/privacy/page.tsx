@@ -149,7 +149,7 @@ export default function PrivacyPage() {
         <p className="leading-relaxed opacity-80">
           Forever Bloom Crochet — Ambarnath, Thane, Maharashtra, India
           <br />
-          Grievance Officer / Proprietor: Garnish Sharma
+          Grievance Officer / Proprietor: Harsha Nikam B
           <br />
           WhatsApp:{" "}
           <a

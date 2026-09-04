@@ -12,7 +12,7 @@ WhatsApp: +91 77980 54491
 
 - [x] **Privacy Policy** (`/privacy`) — DPDP-oriented: data types, purpose, consent, storage, sharing, retention, rights, children, security, localStorage, contact
 - [x] **Terms of Service** (`/terms`) — seller identity, handmade variations, INR pricing / tax honesty, order + payment, shipping by reference, IP, misuse, liability, Indian law / Thane-Maharashtra jurisdiction (CPA rights preserved)
-- [x] **Grievance Redressal** (`/grievance`) — officer Garnish Sharma, WhatsApp channel, 48h acknowledgement / 1-month endeavour, NCH 1915 link
+- [x] **Grievance Redressal** (`/grievance`) — officer Harsha Nikam B, WhatsApp channel, 48h acknowledgement / 1-month endeavour, NCH 1915 link
 - [x] **Shipping & Returns** (`/shipping`) — lead times, COD, returns; prepaid refund timing note added
 - [x] **Footer Help** — Grievance link; Admin link removed from public footer
 - [x] **About / Footer Connect** — brand name, Ambarnath address, WhatsApp visible
@@ -28,7 +28,7 @@ WhatsApp: +91 77980 54491
 - [ ] **GST registration** — if turnover crosses threshold or marketplace / B2B needs it; display GSTIN on invoices when registered
 - [ ] **Tax invoices** — issue invoices correctly once GST-registered; until then keep honest wording (site already states GST details if/when applicable)
 - [ ] **Dedicated grievance email** — optional but useful for E-Commerce Rules optics; update `/grievance` and `/privacy` when you have one (do not invent)
-- [ ] **Confirm proprietor legal name** — site uses **Garnish Sharma**; ensure this matches bank / Udyam / GST docs
+- [x] **Confirm proprietor legal name** — site uses **Harsha Nikam B**; ensure this matches bank / Udyam / GST docs
 - [ ] **Trademark** — optional brand protection for “Forever Bloom Crochet” (not required to sell)
 - [ ] **No fake reviews** — only publish genuine customer feedback (CPA / unfair trade practice risk)
 - [ ] **Legal Metrology** — if selling pre-packaged retail with mandatory declarations (net qty, MRP on packs, etc.), comply where rules apply to your packaging

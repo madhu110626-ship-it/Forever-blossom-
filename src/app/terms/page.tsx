@@ -18,7 +18,7 @@ export default function TermsPage() {
       <section className="mt-10 not-prose space-y-3">
         <h2 className="font-display text-2xl text-bloom-purple dark:text-bloom-lilac">Seller identity</h2>
         <p className="leading-relaxed opacity-80">
-          Forever Bloom Crochet is operated by Garnish Sharma (Proprietor), Ambarnath, Thane,
+          Forever Bloom Crochet is operated by Harsha Nikam B (Proprietor), Ambarnath, Thane,
           Maharashtra, India. Customer care / WhatsApp:{" "}
           <a
             href={WA}

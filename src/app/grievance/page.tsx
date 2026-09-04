@@ -35,7 +35,7 @@ export default function GrievancePage() {
         <h2 className="font-display text-2xl text-bloom-purple dark:text-bloom-lilac">Grievance Officer</h2>
         <ul className="list-none space-y-1 opacity-80">
           <li>
-            <strong>Name:</strong> Garnish Sharma
+            <strong>Name:</strong> Harsha Nikam B
           </li>
           <li>
             <strong>Designation:</strong> Grievance Officer / Proprietor
