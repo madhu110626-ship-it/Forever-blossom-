@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bloom-purple: #4a1c6b;
+  --bloom-gold: #c9a227;
+  --bloom-cream: #fbf7f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bloom-cream text-bloom-charcoal font-body antialiased;
+}
+
+.dark body,
+html.dark body {
+  @apply bg-bloom-purple-deep text-bloom-ivory;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bloom-purple px-6 py-3 text-sm font-medium text-white shadow-soft transition hover:bg-bloom-purple-soft focus:outline-none focus:ring-2 focus:ring-bloom-gold;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bloom-gold px-6 py-3 text-sm font-medium text-bloom-purple-deep shadow-gold transition hover:bg-bloom-gold-light focus:outline-none focus:ring-2 focus:ring-bloom-purple;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-bloom-purple px-6 py-3 text-sm font-medium text-bloom-purple transition hover:bg-bloom-purple hover:text-white dark:border-bloom-lilac dark:text-bloom-lilac;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl text-bloom-purple dark:text-bloom-lilac;
+  }
+  .card-surface {
+    @apply rounded-2xl bg-white/90 shadow-soft backdrop-blur dark:bg-bloom-purple/40;
+  }
+}
+
+/* floating petals */
+.petal {
+  position: absolute;
+  width: 14px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #c9a9e0, #4a1c6b);
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  opacity: 0.45;
+  animation: float 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
