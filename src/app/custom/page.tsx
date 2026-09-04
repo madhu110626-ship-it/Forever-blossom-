@@ -32,7 +32,7 @@ export default function CustomPage() {
               required
               value={form[k]}
               onChange={(e) => setForm({ ...form, [k]: e.target.value })}
-              placeholder={k}
+              placeholder={k === "colours" ? "Colours (e.g. Pink, Lavender)" : k}
               className="w-full rounded-xl border px-3 py-2 text-sm"
             />
           ))}
