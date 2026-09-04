@@ -98,11 +98,23 @@ export default function CheckoutPage() {
           After you place an order, WhatsApp opens so we get your order instantly on 77980 54491.
         </p>
         <p className="text-xs opacity-70">
-          Handmade lead times & delivery: see{" "}
+          Prices in INR. By ordering you agree to our{" "}
           <Link href="/shipping" className="underline underline-offset-2 hover:text-bloom-gold">
             Shipping &amp; Returns
           </Link>
-          .
+          ,{" "}
+          <Link href="/terms" className="underline underline-offset-2 hover:text-bloom-gold">
+            Terms
+          </Link>
+          ,{" "}
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-bloom-gold">
+            Privacy
+          </Link>
+          , and{" "}
+          <Link href="/grievance" className="underline underline-offset-2 hover:text-bloom-gold">
+            Grievance
+          </Link>{" "}
+          policies.
         </p>
         {(["name", "phone", "email", "address", "city", "pin"] as const).map((k) => (
           <input

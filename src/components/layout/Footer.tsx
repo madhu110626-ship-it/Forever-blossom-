@@ -39,11 +39,11 @@ export function Footer() {
           <h4 className="mb-3 font-display text-lg text-bloom-gold">Help</h4>
           <ul className="space-y-2 text-sm">
             <li><Link href="/shipping" className="hover:text-bloom-gold">Shipping & Returns</Link></li>
+            <li><Link href="/grievance" className="hover:text-bloom-gold">Grievance Redressal</Link></li>
             <li><Link href="/privacy" className="hover:text-bloom-gold">Privacy Policy</Link></li>
             <li><Link href="/terms" className="hover:text-bloom-gold">Terms of Service</Link></li>
             <li><Link href="/wishlist" className="hover:text-bloom-gold">Wishlist</Link></li>
             <li><Link href="/login" className="hover:text-bloom-gold">Login / OTP</Link></li>
-            <li><Link href="/admin" className="hover:text-bloom-gold">Admin</Link></li>
           </ul>
         </div>
 
@@ -55,7 +55,14 @@ export function Footer() {
             <a href={waLink("Hi Forever Bloom Crochet!")} target="_blank" rel="noreferrer" className="rounded-full border border-bloom-gold/50 px-3 py-1 hover:bg-bloom-gold hover:text-bloom-purple-deep">WhatsApp</a>
           </div>
           <p className="text-sm text-bloom-ivory/80">
+            Forever Bloom Crochet<br />
             Ambarnath, Thane,<br />Maharashtra, India
+          </p>
+          <p className="mt-2 text-sm text-bloom-ivory/80">
+            WhatsApp:{" "}
+            <a href={waLink("Hi Forever Bloom Crochet!")} target="_blank" rel="noreferrer" className="hover:text-bloom-gold">
+              +91 77980 54491
+            </a>
           </p>
         </div>
       </div>

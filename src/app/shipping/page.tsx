@@ -86,6 +86,11 @@ export default function ShippingPage() {
           . We’ll arrange a remake / replacement or a fair resolution. For hygiene, blooms that have
           been used or worn typically cannot be returned.
         </p>
+        <p className="leading-relaxed opacity-80">
+          For eligible prepaid refunds, we process them in a reasonable time aligned with payment /
+          RBI norms once approved; custom and made-to-order pieces remain generally non-returnable as
+          above.
+        </p>
       </section>
 
       <section className="mt-8 not-prose space-y-3">
@@ -111,6 +116,10 @@ export default function ShippingPage() {
           for all shipping help.
         </p>
       </section>
+
+      <p className="mt-10 text-xs opacity-60 not-prose leading-relaxed">
+        This policy is for transparency and consumer information; it is not formal legal advice.
+      </p>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { processImages } from "@/data/products";
+import { waLink } from "@/lib/whatsapp";
 
 export const metadata = { title: "About" };
 
@@ -18,7 +19,14 @@ export default function AboutPage() {
           </p>
           <div className="rounded-2xl bg-bloom-purple p-5 text-bloom-ivory">
             <p className="font-display text-xl text-bloom-gold">Studio</p>
+            <p className="mt-1 text-sm">Forever Bloom Crochet</p>
             <p className="mt-1 text-sm">Ambarnath, Thane, Maharashtra, India</p>
+            <p className="mt-2 text-sm">
+              WhatsApp:{" "}
+              <a href={waLink("Hi Forever Bloom Crochet!")} target="_blank" rel="noreferrer" className="text-bloom-gold underline underline-offset-2">
+                +91 77980 54491
+              </a>
+            </p>
           </div>
         </div>
       </div>
