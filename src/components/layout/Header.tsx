@@ -163,7 +163,6 @@ export function Header() {
               {links.map((l) => (
                 <Link key={l.href} href={l.href} onClick={() => setMobile(false)} className="font-medium text-bloom-purple dark:text-bloom-lilac">{l.label}</Link>
               ))}
-              <Link href="/admin" onClick={() => setMobile(false)} className="text-sm text-bloom-gold-dark">Admin</Link>
               <p className="pt-4 text-xs text-bloom-charcoal/60">{user ? `Hi, ${user.name}` : t("Guest", "Guest")}</p>
             </div>
           </div>

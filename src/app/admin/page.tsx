@@ -33,7 +33,7 @@ export default function AdminPage() {
     if (pass === "bloomadmin" || pass === "admin") {
       sessionStorage.setItem("fbc-admin", "1");
       setAuthed(true);
-    } else alert("Try password: bloomadmin");
+    } else alert("Incorrect password");
   };
 
   if (!authed) {
@@ -41,7 +41,7 @@ export default function AdminPage() {
       <div className="mx-auto flex min-h-[60vh] max-w-md flex-col justify-center px-4">
         <h1 className="section-title mb-4">Admin</h1>
         <form onSubmit={login} className="card-surface space-y-3 p-6">
-          <p className="text-sm opacity-70">Mock auth — password: bloomadmin</p>
+          <p className="text-sm opacity-70">Staff only — not linked from the shop. Bookmark this page.</p>
           <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} placeholder="Password" className="w-full rounded-xl border px-3 py-2" />
           <button className="btn-primary w-full">Enter</button>
         </form>
